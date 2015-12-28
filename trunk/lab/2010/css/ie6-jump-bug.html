@@ -1,0 +1,52 @@
+<!doctype html> 
+<html> 
+<head> 
+<meta charset="gbk" /> 
+<title>淘宝网 - 淘！我喜欢</title> 
+<style> 
+ 
+* { margin:0; padding:0; }
+
+#header {
+	position:relative;
+}
+
+#tb-banner {
+	height:40px;
+	background:red;
+}
+#logo-wrapper {
+	width:100%; /* haslayout */
+}
+#logo {
+	position:relative; /* or position:absolute; */
+}
+
+ </style> 
+<base target="_blank" /> 
+</head> 
+<body>
+
+<div id="header">
+
+	<div id="tb-banner"></div>
+	 
+	<div id="logo-wrapper">
+		<h1 id="logo"> 
+			<img width="167" height="63" src="http://img07.taobaocdn.com/tps/i7/T1QXVsXnFjXXXXXXXX-167-63.png" alt="淘宝网" title="Taobao.com - 阿里巴巴旗下网站" /> 
+		</h1>
+
+		<a href="http://www.chencheng.org/blog/2010/02/03/ie6-jump-bug/">back to article</a>
+	</div>
+
+</div>
+
+<script>
+
+setTimeout(function() {
+	document.getElementById('header').className = '';
+}, 200);
+
+</script> 
+</body> 
+</html> 

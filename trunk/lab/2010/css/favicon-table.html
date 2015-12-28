@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="gbk" />
+	<title>Test</title>
+</head>
+<body>
+
+	<style>
+		#tb-12345 {
+			table-layout:fixed;
+			border-collapse:collapse;
+		}
+		#tb-12345 td, #tb-12345 th {
+			border:1px solid #666;
+			font-size:12px;
+			padding:4px 8px;
+		}
+	</style>
+
+	<table id="tb-12345">
+		<tr>
+			<th rowspan="3"></th>
+			<th colspan="4">icon文件实际存在</th>
+			<th rowspan="2" colspan="2">icon文件不存在(404)</th>
+		</tr>
+		<tr>
+			<th rowspan="2">空Cache</th>
+			<th colspan="3">有Cache且Cache没有过期</th>
+		</tr>
+		<tr>
+			<th>Ctrl+F5</th>
+			<th>F5</th>
+			<th>地址栏按回车</th>
+			<th>Ctrl+F5/F5</th>
+			<th>地址栏按回车</th>
+		</tr>
+		<tr>
+			<th>Chrome</th>
+			<td>发送请求</td>
+			<td colspan="3">不发送请求</td>
+			<td colspan="2">发送404请求</td>
+		</tr>
+		<tr>
+			<th>Firefox</th>
+			<td>发送请求</td>
+			<td colspan="3">不发送请求</td>
+			<td colspan="2">如果两次都返回404，第三次开始不再请求</td>
+		</tr>
+		<tr>
+			<th>IE8/7</th>
+			<td>发送请求</td>
+			<td colspan="3">不发送请求</td>
+			<td colspan="2">如果一次都返回404，第三次开始不再请求</td>
+		</tr>
+		<tr>
+			<th>IE6/5x</th>
+			<td colspan="6">只在加入收藏夹时，会请求icon，且cache过期前不再请求</td>
+		</tr>
+		<tr>
+			<th>Safari</th>
+			<td>发送请求</td>
+			<td>/</td>
+			<td>发送请求</td>
+			<td>不发送请求</td>
+			<td>发送404请求</td>
+			<td>不发送请求</td>
+		</tr>
+		<tr>
+			<th>Opera</th>
+			<td>发送请求</td>
+			<td>/</td>
+			<td>发送lastModified请求</td>
+			<td>不发送请求</td>
+			<td>发送404请求</td>
+			<td>不发送请求</td>
+		</tr>
+	</table>
+
+</body>
+</html>
